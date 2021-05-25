@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { GameComponent } from './components/game/game.component';
 import { MediaComponent } from './components/media/media.component';
+import { HeaderComponent } from './components/header/header.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     GameComponent,
-    MediaComponent
+    MediaComponent,
+    HeaderComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
