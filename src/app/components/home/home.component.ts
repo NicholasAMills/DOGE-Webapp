@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DogecoinService } from 'src/app/services/dogecoin.service';
+import { interval, Subscription } from 'rxjs'
+
 
 @Component({
   selector: 'doge-home',
@@ -13,13 +15,19 @@ export class HomeComponent implements OnInit {
 
   currentPrice : any
   exchange : any
+  sub : Subscription;
+
 
   ngOnInit(): void {
-    this.getData()
+    this.getData();
+    this.sub = interval(60000).subscribe((x=>{
+      this.getData();
+    }))
   }
 
   getData()
   {
+    console.log("Updating...")
     const url : string = 'https://sochain.com//api/v2/get_price/DOGE/USD';
     this.http.get(url).subscribe((res)=>{
       console.log(res)
