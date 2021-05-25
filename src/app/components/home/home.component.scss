@@ -1,0 +1,21 @@
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 70%;
+}
+
+.earth{
+    position: absolute;
+    left: 2%;
+    width: 20%;
+    bottom: 2%
+}
+
+.moon{
+    position: absolute;
+    right: 2%;
+    width: 8%;
+    bottom: 10%;
+}

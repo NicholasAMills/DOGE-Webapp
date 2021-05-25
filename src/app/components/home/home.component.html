@@ -1,1 +1,38 @@
-<p style="color: blue;">home works!</p>
+<header>
+
+    <table class="center">
+        <tr>
+            <th scope="col">
+                <p style="color: white; font-size: 24px;">"Fate loves irony, and what would be the most ironic outcome? That the currency made as a joke becomes the real currency" - Elon Musk</p>
+            </th>
+        </tr>
+        <tr>
+            <th scope="col" >
+                <a href="//www.dogecoin.com"> <img style="width: 20%;" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi.imgur.com%2FOIHgpjN.png&f=1&nofb=1"> </a>
+            </th>
+        </tr>
+        <tr>
+            <th scope="col">
+                 <p class="center" style="color: white; font-size: 30px;">${{currentPrice}} </p>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <p class="center" style="color: white;">Exchange: {{exchange}}</p>
+            </th>
+        </tr>
+    </table>
+
+    <img class="earth" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Earth_Western_Hemisphere_transparent_background.png/1200px-Earth_Western_Hemisphere_transparent_background.png"> <!-- earth -->
+
+    <img class="moon" src="https://i.pinimg.com/originals/a1/01/e2/a101e22fc458c1110d418ee309f240c8.png"> <!-- moon -->
+
+    <div *ngIf="currentPrice <= 0.13">
+        <img class="rocket" style="width: 10%; position: absolute; bottom: 13%; right: 83%;" src="https://media3.giphy.com/media/Ogak8XuKHLs6PYcqlp/giphy.gif?cid=ecf05e4749kf36ipkj0wbzh7ojjhwamf9bdt2nl2a2out9ea&rid=giphy.gif&ct=g">
+    </div>
+    <div *ngIf="currentPrice > 0.13">
+        <img class="rocket" style="width: 10%; position: absolute; bottom: 13%; right: {{(1-currentPrice)*100}}%" src="https://media3.giphy.com/media/Ogak8XuKHLs6PYcqlp/giphy.gif?cid=ecf05e4749kf36ipkj0wbzh7ojjhwamf9bdt2nl2a2out9ea&rid=giphy.gif&ct=g">
+    </div>
+
+
+</header>
